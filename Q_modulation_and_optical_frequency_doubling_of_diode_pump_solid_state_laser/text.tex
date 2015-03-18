@@ -1,0 +1,390 @@
+% MplTplt - Yet another LaTeX template for Modern Physics Lab, PKU.
+% Copyright (C) 2014 Huang Kangjing and contributors
+ 
+% This work is completely rewritten basing on the work of Cao Chuanwu
+% and Sun Sibai, with texts in the template originally coming from the
+% Modren Phys. Lab.
+ 
+% This file is released under the MIT license.
+%
+% Permission is hereby granted, free of charge, to any person obtaining a copy
+% of this software and associated documentation files (the "Software"), to deal
+% in the Software without restriction, including without limitation the rights
+% to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+% copies of the Software, and to permit persons to whom the Software is
+% furnished to do so, subject to the following conditions:
+% 
+% The above copyright notice and this permission notice shall be included in
+% all copies or substantial portions of the Software.
+% 
+% THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+% IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+% FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+% AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+% LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+% OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+% THE SOFTWARE.
+%
+ 
+% This template depends on the "revtex4.1" package from APS Journals
+% <http://publish.aps.org/revtex/revtex-faq>, and the Chinese handling
+% is done with XeLaTeX engine and package "xeCJK". Please ensure these
+% packages are available in your chosen Tex software distribution.
+ 
+% Document created using this template should be compiled with XeLaTeX
+% engines rather than plain LaTeX or plain TeX engines.
+ 
+% The non-ASCII texts of this template is encoded in UTF-8 encoding.
+% Please note that XeLaTeX only accepts UTF-8 encoded documents, so
+% set your editor to use UTF-8 while creating documents with this template.
+ 
+% Recommended TeX software distribution to use with this template is
+% Tex Live developed by the TeX User Group (TUG), please visit the home
+% page of the distribution <https://www.tug.org/texlive/> for further details.
+ 
+% NOTE THAT IMPORTANT INSTRUCTIONS HAS BEEN WRITTEN AS UPPERCASE COMMENTS
+% IN THE TEXT, PLEASE READ THEM CAREFULLY AND FOLLOW THEM TO MAKE THE
+% TEMPLATE WORK!
+ 
+% Any further contributions to the template is welcome, please send
+% pull requests through github or send mail to maintainer.
+ 
+% For any other questions, please do not hesitate to contact maintainer.
+ 
+% Current maintainer:
+% Huang Kangjing <huangkangjing@gmail.com>
+ 
+% Contributors:
+% Sun Sibai <niasw@pku.edu.cn>
+% Cao Chuanwu <>
+% Huang Kangjing <huangkangjing@gmail.com>
+ 
+ 
+\documentclass[aps,pre,12pt,preprint,onecolumn,showpacs,showkeys]{revtex4-1}
+ 
+% Setting up Chinese handling.
+\usepackage{fontspec,xeCJK}
+ 
+% Setting up fonts.
+% PLEASE MODIFY ALL THESE FONT NAMES ACCORDING TO YOUR FONT
+% INSTALLATION AND PERFERENCE.
+ 
+% Setting up main fonts and mono fonts.
+\setmainfont{Liberation Serif}
+\setmonofont{Liberation Mono}
+% SimSun is required font for the main body of the text.
+\setCJKmainfont[AutoFakeBold=5,AutoFakeSlant]{SimSun}
+\setCJKmonofont[AutoFakeBold=2,AutoFakeSlant]{SimHei}
+ 
+% Setting up alternative font families.
+% Note that these three fonts below are required fonts in document
+% title, section headings and figure captions.
+\newCJKfontfamily\heiti[AutoFakeBold=2,AutoFakeSlant]{SimHei}
+\newCJKfontfamily\fangsong[AutoFakeBold=5,AutoFakeSlant]{FangSong}
+\newCJKfontfamily\kaiti[AutoFakeBold=5,AutoFakeSlant]{KaiTi}
+ 
+% Setting up paragraph indent.
+\parindent 2em
+ 
+% Setting up macros for Chinese-style font size setting.
+\newcommand{\fseight}{\fontsize{5.02}{6.02}\selectfont}
+\newcommand{\fsseven}{\fontsize{5.52}{6.62}\selectfont}
+\newcommand{\fsssix}{\fontsize{6.52}{7.83}\selectfont}
+\newcommand{\fssix}{\fontsize{7.53}{9.03}\selectfont}
+\newcommand{\fssfive}{\fontsize{9.03}{10.84}\selectfont}
+\newcommand{\fsfive}{\fontsize{10.54}{12.65}\selectfont}
+\newcommand{\fssfour}{\fontsize{12.05}{14.45}\selectfont}
+\newcommand{\fsfour}{\fontsize{14.05}{16.86}\selectfont}
+\newcommand{\fssthree}{\fontsize{15.06}{18.07}\selectfont}
+\newcommand{\fsthree}{\fontsize{16.06}{19.27}\selectfont}
+\newcommand{\fsstwo}{\fontsize{18.07}{21.68}\selectfont}
+\newcommand{\fstwo}{\fontsize{22.08}{26.50}\selectfont}
+\newcommand{\fssone}{\fontsize{24.09}{28.91}\selectfont}
+\newcommand{\fsone}{\fontsize{26.10}{31.32}\selectfont}
+\newcommand{\fsszero}{\fontsize{36.14}{43.36}\selectfont}
+\newcommand{\fszero}{\fontsize{42.16}{50.59}\selectfont}
+ 
+% Replace words to Chinese corespondence.
+\renewcommand\appendixname{附录}
+\renewcommand\abstractname{}
+\renewcommand\tablename{表}
+\renewcommand\figurename{图}
+ 
+% Replace words in revtex4-1 to Chinese corespondence.
+\makeatletter
+\def\@pacs@name{\heiti\fssfour \textbf{PACS码：}\normalfont}
+\def\@keys@name{\heiti\fssfour \textbf{关键词：}\normalfont}
+\def\Dated@name{日期：}
+\def\Received@name{\fssfive 接收 }
+\def\Revised@name{\fssfive 修订 }
+\def\Accepted@name{\fssfive 采纳 }
+\def\Published@name{\fssfive 发表 }
+\makeatother
+ 
+% Change label style of enumerate.
+\renewcommand{\labelenumi}{\alph{enumi}.}
+ 
+% Setting up geometry.
+\usepackage{geometry}
+\geometry{top=2.54cm,bottom=2.54cm,left=3cm,right=3cm}
+ 
+% Setting up line space.
+\usepackage{setspace}
+\linespread{1.6}
+ 
+% Setting up hyperreferences.
+\usepackage{hyperref}
+\hypersetup{colorlinks=true}
+ 
+% Setting up styles for section headings.
+\usepackage{titlesec}
+\titleformat*{\section}{\bf\fangsong\fsfour}
+\titleformat*{\subsection}{\bf\fangsong}
+ 
+% Loading packages for image handling.
+\usepackage{subfig}
+\usepackage{graphicx,psfrag,epsfig}
+ 
+% Setting up caption styles.
+\usepackage{caption}
+\DeclareCaptionFont{kaiti}{\kaiti}
+\DeclareCaptionFont{bfheiti}{\bf\heiti}
+\captionsetup{font=small,format=plain,labelfont=bfheiti,%
+  textfont=kaiti,justification=raggedright,%
+  singlelinecheck=false}
+ 
+% Loading packages for math typings.
+\usepackage{amsmath,amsfonts,amssymb,amsthm,bm,upgreek}
+\usepackage[mathscr]{eucal}
+\usepackage{siunitx}
+\usepackage{pdfpages} 
+ 
+\begin{document}
+ 
+% Title and author info.
+\title{\bf\heiti\fsthree 半导体泵浦固体激光器的调Q与光学二倍频\vspace{15mm}}
+\author{\fangsong\fsfour 黄康靖\vspace{2mm}}
+\affiliation{\normalfont\fssfour 北京大学物理学院2012级本科生~学号: {masked student id}\vspace{2mm}}
+\date{\today}
+\keywords{激光,固体激光器,非线性效应,二倍频,被动调Q}
+\email{huangkangjing@gmail.com; {masked phone number}}
+ 
+% Abstract.
+\begin{abstract}
+  \vspace{10mm}
+  \begin{spacing}{1.5}
+    \fssfour
+    当强光作用于物质时,物质会出现许多在光强较弱的时候不会出现的非线性光学现象,其
+    背后的非线性光学机制和原理值得研究.在非线性光学的相关研究中,半导体二极管泵浦
+    的固体激光器具有很高的能量转化效率,得到了很普遍的应用.本实验通过搭建半导体二
+    极管泵浦激光器,研究了其输出特性与能量转化特性,并且利用激光器研究了调Q生成脉冲激光与非
+    线性二倍频效应的能量转化效率.
+  \end{spacing}
+\end{abstract}
+ 
+% The main body of the document goes from here.
+\maketitle
+\fssfour
+
+\section{引言}
+
+激光产生之后,在传统的光学基础上又建立起来了一个内容丰富,发展迅速的崭新分支,即为
+非线性光学.与线性光学不同的是,当强光作用于物质后,表征光学特性的许多参数如折射率,
+吸收系数,散射截面等都不再是常数,而是一个与入射光有关的变量,相应也出现了在线性光
+学中观察不到的许多新的光学现象.非线性光学的产生与研究,不仅加深了我们对光与物质相
+互作用本质的认识,推动了基础光学理论的发展,同时也具有极重要的实用价值.因此,对于其
+具体机制和原理的实验研究是有意义的.\cite{Book}
+
+在激光和非线性光学的发展过程中,新型激光的出现带来新的光学现象和巨大的应用前
+景.以半导体激光二极管(LD)代替闪光灯泵浦的固体激光器具有非常高的能量转换效率，
+其寿命长,结构紧凑,热效应小,可覆盖波长宽,已成为固体激光器的主要研究和发展方向.
+\cite{Note}
+
+本实验搭建了半导体泵浦固体激光器获得了1064nm的红外激光并调Q产生了脉冲激光;测量
+了在不同工作模式下的激光器输出激光性质;同时观测并测量了晶体的光学二倍频效应.
+
+ 
+\section{背景与实验条件}
+
+\subsection{半导体泵浦激光器}
+ 
+固体激光器(Solid-state Laser),指激发介质是固体的激光器.其介质一般是掺杂有能够泵
+浦到激发态的原子,离子或者分子的玻璃或晶体,通过光泵浦的方式得到激发.由于其参与受
+激辐射的粒子密度远远大于气体工作介质,因此相对更容易获得大能量输出.目前已经有上百
+种晶体作为增益介质实现了固体激光器的运转.以铷离子($\text{Nd}^{3+}$)作为激活粒子
+的激光器使用非常广泛.本实验使用的激光晶体为$\text{Nd:YVO}_4$(掺铷钒酸钇),是低功率应用广
+泛的激光晶体,工作在\SI{1064}{nm}.
+
+半导体激光器(LD)的增益介质是 pn 结半导体二极管.当电流正向通过二极管时,电
+子和空穴分别被从 n 区传输进 p 区和 p 区传至 n 区,在 pn 结中电子与空穴可能复合并产生
+相应能量的电磁辐射.当电流大于阈值时,pn 结中的辐射场变得很强,经过半导体介质的
+端面多次反射放大,在其它弛豫过程消除粒子数反转之前就在 pn 结中发生受激辐射,发射
+出强烈的激光.由于半导体材料中电子密度高,相应的放大系数大,很短的增益介质就可达
+到激光阈值.LD 的发射阈值低,发射光谱可通过选择半导体材料和温度控制在宽范围内选
+择和精确调节,是固体激光器极好的泵浦源.
+
+$\text{Nd:YVO}_4$ 中$\text{Nd}^{+3}$的吸收光谱内有若干吸收峰,本实验使用AlGaAs/GaAs
+为材料的 LD,通过温度调谐使其工作波长与某强吸收峰精确匹配,就可以实现高效率的泵
+浦.LD 的光束发散角较大,须经过端面或侧面耦合进行光束变换后,再聚焦到固体激光器
+的增益介质上.\cite{Note}
+
+\subsection{激光器的调Q原理}
+
+Q调制技术是获得窄脉冲高峰值功率激光的一种基本方法.其基本原理是使激光谐振腔
+的损耗因子(或Q值)按照规定的程序变化:在泵浦激励刚开始时,使激光腔具有高损耗因
+子(低Q值);此时激光器由于阈值高不能产生激光振荡,于是增益介质中的粒子不断从泵
+浦光获得能量并在上能级积累高粒子数;然后在特定时刻,使腔的损耗因子突然降低(高Q
+值),激光阈值也随之突然降低,受激辐射极为迅速地增加.于是在极短时间内,上能级储
+存的大部分粒子的能量转变为激光能量,形成一个很强的激光巨脉冲输出,即调 Q 激光.
+
+
+本实验使用的调Q方法称为被动式可饱和吸收调Q法:在激光谐振腔内设置一饱和吸收体,其吸收系
+数随光强的增加而减少,泵浦开始时,由于其吸收系数大,谐振腔损耗很大,激光不能起振.
+随着泵浦造成增益介质的粒子数反转不断积累,放大的自发辐射不断增加,吸收系数减少,
+当增益开始超过损耗时激光器开始起振.随着激光强度的增加,吸收系数继续下降,促使激
+光更迅速增加,产生了不断增长的激光辐射高峰.当激光光强增至吸收体的饱和光强时,增
+益系数显著下降,腔内光子数密度降低.降到初始值时,吸收系数也恢复到初始的高值,调
+Q 脉冲结束.本实验利用$\text{Cr}^{+4}\text{:YAG}$晶体对1064nm的固体激光器进行调Q.
+\cite{Note}
+
+\subsection{非线性光学基础}
+
+激光与物质的非线性作用,可以写成极化强度矢量的表达式形式:
+\begin{equation}
+    \label{eq:nonlinear}
+    \vec{P} = \chi^{(1)}\vec{E} + \chi^{(2)}\vec{E}\vec{E} +
+    \chi^{(3)}\vec{E}\vec{E}\vec{E} + \cdots
+\end{equation}
+理论上可以得到\cite{Book},当作用于介质的场的形式是波动形式时,产生的输出场内将会
+有二倍频成分.
+
+当入射光的电场很小时,表达式\ref{eq:nonlinear}中的非线性项可以忽略,产生的偶极子实际上与电场
+正比,这就是线性光学现象.但当入射光的电场较强时,非线性项不能再被忽略,因而可
+产生二次倍频、混频等现象.1961 年 Franken 等人用红宝石激光照射石英晶体,观测到
+波长为入射激光波长一半的二次谐波,这是第一个被观测到的非线性光学效应.\cite{Note}
+
+本次实验使用的非线性晶体是KTP(磷酸钛氧钾),是较为常用的非线性光学晶体.
+
+\section{实验仪器与内容}
+
+实验的装置图如图~\ref{fig:graph}所示.
+
+\begin{figure}[htbp]
+    \includegraphics[width=.8\textwidth]{graph.pdf}
+    \caption{\label{fig:graph}%
+        实验装置的示意图,图中探测器可以为功率计,也可以为连接示波器的光电探测器}
+\end{figure}
+
+本实验首先测量了泵浦激光的输出功率特性,即测定了泵浦激光的输出功率值和加的电流之
+间的关系.
+
+随后,本实验使用3\%@\SI{1064}{nm}的输出腔镜和前述的激光晶体以及耦合透镜搭建了固体
+激光器,测量了其输出特性.
+
+接着,本实验使用了前述的调Q晶体和非线性晶体,分别搭建了调Q脉冲激光光路和非线性二倍
+频光路,测量了其输出特性与有关参数.
+
+\section{实验结果及分析讨论}
+ 
+对于泵浦用LD激光器的输出功率特性,测量得到的输出功率图线如图~\ref{fig:plotIP}中蓝
+线所示.
+
+\begin{figure}[htbp]
+    \includegraphics[width=\textwidth]{plot1.pdf}
+    \caption{\label{fig:plotIP}%
+        各激光的输出功率特性图线,图中所有的曲线都是通过实验点作三阶分段自然样条插值
+        得到的}
+\end{figure}
+
+接着,测量了激光系统的功率特性曲线,如图~\ref{fig:plotIP}中绿线所示.
+
+根据LD激光器输出功率特性测量点作三节分段自然样条插值的结果,可以计算固体激光系统
+的能量转化效率,并且绘制其能量转化效率的特性曲线,如图~\ref{fig:plotn1}所示.
+
+\begin{figure}[htbp]
+    \includegraphics[width=\textwidth]{plot2.pdf}
+    \caption{\label{fig:plotn1}%
+        激光系统的能量转化效率曲线,转化效率是使用LD能量特性曲线作三阶分段自然样
+        条差值后计算的.
+    }
+\end{figure}
+
+随后,往共振腔内位置放入了调Q晶体,使用探测器和示波器测量产生的脉冲激光的脉宽和重
+复频率,得到脉宽为:
+\begin{equation}
+    \label{eq:dt}
+    \Delta t = \SI{500.0}{ns}
+\end{equation}
+得到重复频率为:
+\begin{equation}
+    \label{eq:f}
+    f = \SI{125.0}{kHz}
+\end{equation}
+同时,测量了不同泵浦功率下的脉冲激光功率,测量结果与相关联的功率转化效率见表~\ref{tab:data}.
+
+\begin{table}[htbp]
+  \caption{\label{tab:data}%
+      泵浦电流和脉冲激光功率之间的数值关系表,其中第一项对应到激光的阈值发射
+  }
+\begin{ruledtabular}
+  \begin{tabular}{lll}
+      泵浦激光激励电流大小 I/A & 脉冲激光输出功率 P/mW & 功率转化效率 n \\
+      \colrule
+        0.80 & 2.00 & 0.0069 \\
+        1.50 & 29.5 & 0.037\\
+      1.71 & 33.8 & 0.036\\
+      1.90 & 40.8 & (无对应LD激光数据)
+\end{tabular}
+\end{ruledtabular}
+\end{table}
+
+最后,换用了短波通输出腔镜(R = 99.5\%@\SI{1064}{nm},HT@\SI{532}{nm})后,放上了前述
+的非线性晶体,测量了其功率输出曲线,如图~\ref{fig:plotIP}或图~\ref{fig:plotNL}中红线所示
+
+\begin{figure}[htbp]
+    \includegraphics[width=\textwidth]{plot3.pdf}
+    \caption{\label{fig:plotNL}%
+        二倍频非线性光学系统的功率输出曲线,为便于观察曲线特性而单独作图.
+    }
+\end{figure}
+
+同样根据LD激光器输出功率特性测量点作三节分段自然样条插值的结果,可以计算非线性系统
+的能量转化效率,并且绘制其能量转化效率的特性曲线,如图~\ref{fig:plotn2}所示.
+
+\begin{figure}[htbp]
+    \includegraphics[width=\textwidth]{plot4.pdf}
+    \caption{\label{fig:plotn2}%
+        二倍频非线性光学系统的能量转化效率曲线,转化效率是使用LD能量特性曲线作三阶分段自然样
+        条差值后计算的.
+    }
+\end{figure}
+\section{结论}
+
+实验成功搭建了半导体泵浦固体激光器,并且测量了它的功率输出特性.实验在半导体泵浦固
+体激光器上实现了调Q产生脉冲激光与非线性二倍频,并且测量了它们的功率输出特性与能量
+转化效率.
+ 
+\section{致谢}
+
+感谢蒋莹莹老师在实验中认真而专业的指导.
+
+感谢黄浩楠师兄在实验中仔细而周到的协助.
+ 
+\begin{thebibliography}{}
+\bibitem{Book} 吴思成，王祖铨~2010 近代物理实验（第三版）（北京：高等教
+育出版社）第xxx页.  
+\bibitem{Note} 半导体泵浦固体激光器的调 Q 与光学二倍频 - 补充讲义
+\end{thebibliography}
+ 
+\clearpage
+\appendix
+ 
+ \section{实验数据的处理代码}
+
+实验数据使用sage数学套件处理,处理代码作为附件附在文后.
+
+\newpage
+\includepdf[pages=1]{sage.pdf}
+\includepdf[pages=-]{sage.pdf}
+ 
+\end{document} 

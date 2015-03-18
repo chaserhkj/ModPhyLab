@@ -1,0 +1,417 @@
+% MplTplt - Yet another LaTeX template for Modern Physics Lab, PKU.
+% Copyright (C) 2014 Huang Kangjing and contributors
+ 
+% This work is completely rewritten basing on the work of Cao Chuanwu
+% and Sun Sibai, with texts in the template originally coming from the
+% Modren Phys. Lab.
+ 
+% This file is released under the MIT license.
+%
+% Permission is hereby granted, free of charge, to any person obtaining a copy
+% of this software and associated documentation files (the "Software"), to deal
+% in the Software without restriction, including without limitation the rights
+% to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+% copies of the Software, and to permit persons to whom the Software is
+% furnished to do so, subject to the following conditions:
+% 
+% The above copyright notice and this permission notice shall be included in
+% all copies or substantial portions of the Software.
+% 
+% THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+% IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+% FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+% AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+% LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+% OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+% THE SOFTWARE.
+%
+ 
+% This template depends on the "revtex4.1" package from APS Journals
+% <http://publish.aps.org/revtex/revtex-faq>, and the Chinese handling
+% is done with XeLaTeX engine and package "xeCJK". Please ensure these
+% packages are available in your chosen Tex software distribution.
+ 
+% Document created using this template should be compiled with XeLaTeX
+% engines rather than plain LaTeX or plain TeX engines.
+ 
+% The non-ASCII texts of this template is encoded in UTF-8 encoding.
+% Please note that XeLaTeX only accepts UTF-8 encoded documents, so
+% set your editor to use UTF-8 while creating documents with this template.
+ 
+% Recommended TeX software distribution to use with this template is
+% Tex Live developed by the TeX User Group (TUG), please visit the home
+% page of the distribution <https://www.tug.org/texlive/> for further details.
+ 
+% NOTE THAT IMPORTANT INSTRUCTIONS HAS BEEN WRITTEN AS UPPERCASE COMMENTS
+% IN THE TEXT, PLEASE READ THEM CAREFULLY AND FOLLOW THEM TO MAKE THE
+% TEMPLATE WORK!
+ 
+% Any further contributions to the template is welcome, please send
+% pull requests through github or send mail to maintainer.
+ 
+% For any other questions, please do not hesitate to contact maintainer.
+ 
+% Current maintainer:
+% Huang Kangjing <huangkangjing@gmail.com>
+ 
+% Contributors:
+% Sun Sibai <niasw@pku.edu.cn>
+% Cao Chuanwu <>
+% Huang Kangjing <huangkangjing@gmail.com>
+ 
+ 
+\documentclass[aps,pre,12pt,preprint,onecolumn,showpacs,showkeys]{revtex4-1}
+ 
+% Setting up Chinese handling.
+\usepackage{fontspec,xeCJK}
+ 
+% Setting up fonts.
+% PLEASE MODIFY ALL THESE FONT NAMES ACCORDING TO YOUR FONT
+% INSTALLATION AND PERFERENCE.
+ 
+% Setting up main fonts and mono fonts.
+\setmainfont{Liberation Serif}
+\setmonofont{Liberation Mono}
+% SimSun is required font for the main body of the text.
+\setCJKmainfont[AutoFakeBold=5,AutoFakeSlant]{SimSun}
+\setCJKmonofont[AutoFakeBold=2,AutoFakeSlant]{SimHei}
+ 
+% Setting up alternative font families.
+% Note that these three fonts below are required fonts in document
+% title, section headings and figure captions.
+\newCJKfontfamily\heiti[AutoFakeBold=2,AutoFakeSlant]{SimHei}
+\newCJKfontfamily\fangsong[AutoFakeBold=5,AutoFakeSlant]{FangSong}
+\newCJKfontfamily\kaiti[AutoFakeBold=5,AutoFakeSlant]{KaiTi}
+ 
+% Setting up paragraph indent.
+\parindent 2em
+ 
+% Setting up macros for Chinese-style font size setting.
+\newcommand{\fseight}{\fontsize{5.02}{6.02}\selectfont}
+\newcommand{\fsseven}{\fontsize{5.52}{6.62}\selectfont}
+\newcommand{\fsssix}{\fontsize{6.52}{7.83}\selectfont}
+\newcommand{\fssix}{\fontsize{7.53}{9.03}\selectfont}
+\newcommand{\fssfive}{\fontsize{9.03}{10.84}\selectfont}
+\newcommand{\fsfive}{\fontsize{10.54}{12.65}\selectfont}
+\newcommand{\fssfour}{\fontsize{12.05}{14.45}\selectfont}
+\newcommand{\fsfour}{\fontsize{14.05}{16.86}\selectfont}
+\newcommand{\fssthree}{\fontsize{15.06}{18.07}\selectfont}
+\newcommand{\fsthree}{\fontsize{16.06}{19.27}\selectfont}
+\newcommand{\fsstwo}{\fontsize{18.07}{21.68}\selectfont}
+\newcommand{\fstwo}{\fontsize{22.08}{26.50}\selectfont}
+\newcommand{\fssone}{\fontsize{24.09}{28.91}\selectfont}
+\newcommand{\fsone}{\fontsize{26.10}{31.32}\selectfont}
+\newcommand{\fsszero}{\fontsize{36.14}{43.36}\selectfont}
+\newcommand{\fszero}{\fontsize{42.16}{50.59}\selectfont}
+ 
+% Replace words to Chinese corespondence.
+\renewcommand\appendixname{附录}
+\renewcommand\abstractname{}
+\renewcommand\tablename{表}
+\renewcommand\figurename{图}
+ 
+% Replace words in revtex4-1 to Chinese corespondence.
+\makeatletter
+\def\@pacs@name{\heiti\fssfour \textbf{PACS码：}\normalfont}
+\def\@keys@name{\heiti\fssfour \textbf{关键词：}\normalfont}
+\def\Dated@name{日期：}
+\def\Received@name{\fssfive 接收 }
+\def\Revised@name{\fssfive 修订 }
+\def\Accepted@name{\fssfive 采纳 }
+\def\Published@name{\fssfive 发表 }
+\makeatother
+ 
+% Change label style of enumerate.
+\renewcommand{\labelenumi}{\alph{enumi}.}
+ 
+% Setting up geometry.
+\usepackage{geometry}
+\geometry{top=2.54cm,bottom=2.54cm,left=3cm,right=3cm}
+ 
+% Setting up line space.
+\usepackage{setspace}
+\linespread{1.6}
+ 
+% Setting up hyperreferences.
+\usepackage{hyperref}
+\hypersetup{colorlinks=true}
+ 
+% Setting up styles for section headings.
+\usepackage{titlesec}
+\titleformat*{\section}{\bf\fangsong\fsfour}
+\titleformat*{\subsection}{\bf\fangsong}
+ 
+% Loading packages for image handling.
+\usepackage{subfig}
+\usepackage{graphicx,psfrag,epsfig}
+ 
+% Setting up caption styles.
+\usepackage{caption}
+\DeclareCaptionFont{kaiti}{\kaiti}
+\DeclareCaptionFont{bfheiti}{\bf\heiti}
+\captionsetup{font=small,format=plain,labelfont=bfheiti,%
+  textfont=kaiti,justification=raggedright,%
+  singlelinecheck=false}
+ 
+% Loading packages for math typings.
+\usepackage{amsmath,amsfonts,amssymb,amsthm,bm,upgreek}
+\usepackage[mathscr]{eucal}
+\usepackage{siunitx}
+ 
+ 
+\begin{document}
+ 
+% Title and author info.
+\title{\bf\heiti\fsthree 电子衍射\vspace{15mm}}
+\author{\fangsong\fsfour 黄康靖\vspace{2mm}}
+\affiliation{\normalfont\fssfour 北京大学物理学院2012级本科生~学号:{masked student id}\vspace{2mm}}
+\date{Dec 21th, 2014}
+\keywords{电子衍射,波粒二象性,物质波,晶格常数,晶体衍射}
+\email{huangkangjing@gmail.com; {masked phone number}}
+
+% Abstract.
+\begin{abstract}
+  \vspace{10mm}
+  \begin{spacing}{1.5}
+    \fssfour
+    在普朗克与爱因斯坦关于光的粒子性的成功的理论基础上,德布
+    罗意于1924年提出了微
+    观粒子也具有波粒二象性的假设.如若能够证明微观粒子束存在衍射现象,即可以证明这
+    一假设.本实验利用电子束在晶体中的衍射现象,证明了电子具有波动性,从而证明了德
+    布罗意的物质波假设,并且利用电子的物质波成功测量了若干晶体样品的晶格常数.
+  \end{spacing}
+\end{abstract}
+ 
+% The main body of the document goes from here.
+\maketitle
+\fssfour
+\section{引言}
+
+\subsection{背景}
+
+在普朗克和爱因斯坦你关于光的微粒性理论的成功基础上,德布罗意于1924年提出了微观粒
+子也具有波动性的假设.德布罗意认为微观粒子的能量$E$和动量$\vec{p}$与平面波的频率
+$\nu$与波长$\lambda$之间的关系与光波中的关系具有一致的形式:
+\begin{equation}
+\label{eq:enu}
+    E = h\nu
+\end{equation}
+\begin{equation}
+\label{eq:pk}
+    \vec{p} = \frac{h}{\lambda}\vec{n} = h\vec{k}
+\end{equation}
+式中,$\vec{n}$为波阵面法线防线的单位矢量,$\vec{k}$为波矢,以上两式称为德布罗意关
+系.德布罗意关系所对应的波称为物质波.\cite{book}
+
+通过德布罗意关系的计算,可以注意到,经几百伏特的电场加速的电子的物质波波长与X射线
+的波长相当.因此,当一束电子入射到晶体上时,应当等同于一束X射线入射到晶体上一样,会
+出现晶体衍射现象.并且,这一电子衍射的几何学应当与X射线衍射完全一样,都遵循劳厄方程
+(式~\ref{eq:le})与布拉格方程(式~\ref{eq:be})所规定的衍射条件.
+
+本实验通过在扫描电子显微镜中观察电子束打在晶体样本上面的衍射图样,验证了电子的波
+动性,并且通过晶体衍射的相关原理,测定了几种晶体样本的晶格常数.
+ 
+\subsection{原理}
+
+\subsubsection{晶体}
+
+晶体中过的原子(或分子、原子集团)在空间作规则的周期型排列,形成空间点阵,即晶格.晶
+体可以看做是由最小结构重复单元的原胞,和空间重复的点阵晶格组成.
+
+通常使用晶列指数$[h,k,l]$和晶面指数$(h,k,l)$来描述晶体中的晶列(任意两个格点的连
+线)和晶面(任意三个不共线的格点决定的平面)的取向.
+
+\subsubsection{布拉格方程与劳厄方程}
+
+布拉格方程与劳厄方程是描述波在晶体上的衍射过程的相关规律的两个方程,这两种描述是
+完全等效的.
+
+从将晶体看做是由一族晶面叠成的观点出发容易导出布拉格方程
+\begin{equation}
+    \label{eq:be}
+    2d\sin{\theta} = \mu\lambda
+\end{equation}
+作为衍射的极强出现条件.式中$d$为晶面间距,$\theta$为入射束与晶面之间的夹角,而
+$\lambda$为波的波长,$\mu$为整数.
+
+结合晶面族中晶面间距的公式,布拉格方程可以进一步写成如下形式
+\begin{equation}
+    \label{eq:be2}
+    \sin{\theta} = \frac{\lambda}{2a}\sqrt{h^2 + k^2 + l^2}
+\end{equation}
+其中,$(h,k,l)$为晶面组的晶面系数,$a$为晶体的晶格常量.
+
+另一方面,对于晶体衍射的过程作矢量分析,容易导出劳厄方程
+\begin{equation}
+\label{eq:le}
+\vec{k} - \vec{k_0} = \mu\vec{g_h}
+\end{equation}
+作为另一形式的衍射极强出现条件.式中$\vec{k}$为出射波波矢,$\vec{k_0}$为入射波波矢.
+$\mu$为整数,$\vec{g_h}$为任意倒格矢.
+
+\section{实验}
+
+实验使用扫描电子显微镜作为产生衍射图像与拍摄衍射图像底片的装置,其原理结构图如图~\ref{fig:ins}
+所示.由热阴极发射出来的电子,经过聚焦系统投射到样品上,随后在底片或荧光屏上成衍射
+图样.显然,入射电子束的发散度越小,电子衍射的分辨率越高.为了提高分辨本领,通常在样
+品上方加上一个限制孔径,用以减小入射电子束的发散度.
+
+\begin{figure}[htbp]
+  \centering
+\includegraphics[width=.2\textwidth]{graph.pdf}
+\caption{\label{fig:ins}%
+    实验装置的原理示意图,实际装置是扫描电子显微镜,其结构比此图复杂,但原理与此图
+    一致.
+}
+\end{figure}
+
+
+当样品与孔径之间的距离足够远时,可以近似的用下式计算衍射角的正弦值:
+\begin{equation}
+    \label{eq:theta}
+    \sin{\theta} = \frac{R}{2L_0}
+\end{equation}
+式中$R$为衍射极强点到底片正中心(零级极强斑)之间的距离,而$L_0$为样品到底片之间的
+距离,本实验中,这一值由扫描电子显微镜的相关参数给出,有$L = \SI{82}{cm}$
+
+实验先后观测并拍摄了Au多晶样品的显微像、Au多晶样品的衍射像、Ag多晶样品的衍射像、
+Cu多晶样品的衍射像、Sn多晶样品的衍射像、以及Si单晶样品的衍射像.
+
+\section{实验结果及分析讨论}
+
+实验拍摄的各显微及衍射像如图~\ref{fig:1}、图~\ref{fig:2}、图~\ref{fig:3}、
+图~\ref{fig:4}、图~\ref{fig:5}、图~\ref{fig:6}所示.
+
+\begin{figure}[htbp]
+  \centering
+\includegraphics[width=.7\textwidth]{4.pdf}
+\caption{\label{fig:1}%
+    Au多晶样品的显微像胶片,胶片编号44049
+}
+\end{figure}
+
+\section{结论}
+\begin{figure}[htbp]
+  \centering
+\includegraphics[width=.7\textwidth]{1.pdf}
+\caption{\label{fig:2}%
+    Au多晶样品的衍射像胶片,胶片编号44050
+}
+\end{figure}
+\begin{figure}[htbp]
+  \centering
+\includegraphics[width=.7\textwidth]{3.pdf}
+\caption{\label{fig:3}%
+    Ag多晶样品的衍射像胶片,胶片编号44051
+}
+\end{figure}
+\begin{figure}[htbp]
+  \centering
+\includegraphics[width=.7\textwidth]{5.pdf}
+\caption{\label{fig:4}%
+    Cu多晶样品的衍射像胶片,胶片编号44052
+}
+\end{figure}
+\begin{figure}[htbp]
+  \centering
+\includegraphics[width=.7\textwidth]{2.pdf}
+\caption{\label{fig:5}%
+    Sn多晶样品的衍射像胶片,胶片编号44053
+}
+\end{figure}
+\begin{figure}[htbp]
+  \centering
+\includegraphics[width=.7\textwidth]{6.pdf}
+\caption{\label{fig:6}%
+    Si单晶样品的衍射像胶片,胶片编号44054
+}
+\end{figure}
+ 
+对于胶片中的诸衍射主极强,测量了其到胶片中心的距离,从而可以得出其各自对应的衍射角正弦值.
+
+对于同一晶体的不同衍射极强,对其作指标化处理,即可得到入射波波长与各个晶体的晶格常
+量的比值.本实验以Au样品的晶格常量$a_0 = \SI{4.0786e-10}{m}$为标准,即可测得其他样
+品的晶格常量.
+
+数据表格见表~\ref{tab:table1}
+\begin{table}[htbp]
+  \caption{\label{tab:table1}%
+      此表为各样品衍射图样中衍射环直径的数据表格,以及在指标化处理后得到的各衍射
+      环直径对应的镜面指数也一并列入}
+\begin{ruledtabular}
+  \begin{tabular}{llllllll}
+      Au D/cm & 对应晶面 & Ag D/cm  & 对应晶面& Cu  
+      D/cm & 对应晶面& Sn D/cm & 对应晶面 \\
+      \colrule
+2.1 & 111 & 2.1 & 111 & 2.3 & 111 & 1.7 & 100 \\ 
+2.4 & 200 & 2.4 & 200 & 2.7 & 200 & 2.3 & 110 \\ 
+3.4 & 220 & 3.4 & 220 & 3.8 & 220 & 2.9 & 111 \\ 
+4 & 311 & 4 & 311 & 4.5 & 311 & 3.3 & 200 \\ 
+5.3 & 331 & 5.3 & 331 & 6 & 420 & 3.7 & 210 \\ 
+5.9 & 422 & 5.9 & 422 & 6.7 & 430/500 & 4 & 211 \\ 
+6.2 & 431/510 & 6.2 & 431/510 & 7.1 &  & 4.4 & 220 \\ 
+7.1 &  & 7.1 \\
+\end{tabular}
+\end{ruledtabular}
+\end{table}
+
+指标化处理后,得到了对于Au样本:
+\begin{equation}
+    \frac{\lambda}{a} = 0.0147 
+\end{equation}
+对于Ag样本:
+\begin{equation}
+    \frac{\lambda}{a} = 0.0147
+\end{equation}
+对于Cu样本:
+\begin{equation}
+    \frac{\lambda}{a} = 0.0163
+\end{equation}
+对于Sn样本:
+\begin{equation}
+    \frac{\lambda}{a} = 0.0202
+\end{equation}
+对于Si样本:
+\begin{equation}
+    \frac{\lambda}{a} = 0.0117
+\end{equation}
+
+于是,根据Au样本的晶格常数标准值,我们可以得到各样本晶格常数的测量值:
+对于Ag样本:
+\begin{equation}
+    a = \SI{4.08e-10}{m}
+\end{equation}
+对于Cu样本:
+\begin{equation}
+    a = \SI{3.68e-10}{m}
+\end{equation}
+对于Sn样本:
+\begin{equation}
+    a = \SI{2.97e-10}{m}
+\end{equation}
+对于Si样本:
+\begin{equation}
+    a = \SI{5.12e-10}{m}
+\end{equation}
+
+至此,本实验成功地验证了电子的波动性,并利用电子的波动性成功地测量了各样本的晶格常数.
+
+\section{致谢}
+ 
+感谢实验老师辛勤而专业的指导.
+
+\begin{thebibliography}{}
+\bibitem{book} 吴思成，王祖铨~2010 近代物理实验（第三版）（北京：高等教
+育出版社）第274页.
+\bibitem{wiki1}Wikipedia contributors. Reciprocal lattice. Wikipedia, The Free
+Encyclopedia. Available at:
+http://en.wikipedia.org/w/index.php?title=Reciprocal\_lattice\&oldid=635150451.
+Accessed December 21, 2014.
+\bibitem{tab}Web contributors, Element periodic table. Available at
+http://periodictable.com/ Accessed December 21, 2014.
+\bibitem{solid}Charles Kittel, Introduction to Solid State Physics (Eighth
+Edition)
+
+\end{thebibliography}
+ 
+\end{document}

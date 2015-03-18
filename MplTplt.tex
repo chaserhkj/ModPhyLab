@@ -1,0 +1,369 @@
+% MplTplt - Yet another LaTeX template for Modern Physics Lab, PKU.
+% Copyright (C) 2014 Huang Kangjing and contributors
+
+% This work is completely rewritten basing on the work of Cao Chuanwu
+% and Sun Sibai, with texts in the template originally coming from the
+% Modren Phys. Lab.
+
+% This file is released under the MIT license.
+%
+% Permission is hereby granted, free of charge, to any person obtaining a copy
+% of this software and associated documentation files (the "Software"), to deal
+% in the Software without restriction, including without limitation the rights
+% to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+% copies of the Software, and to permit persons to whom the Software is
+% furnished to do so, subject to the following conditions:
+% 
+% The above copyright notice and this permission notice shall be included in
+% all copies or substantial portions of the Software.
+% 
+% THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+% IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+% FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+% AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+% LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+% OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+% THE SOFTWARE.
+%
+
+% This template depends on the "revtex4.1" package from APS Journals
+% <http://publish.aps.org/revtex/revtex-faq>, and the Chinese handling
+% is done with XeLaTeX engine and package "xeCJK". Please ensure these
+% packages are available in your chosen Tex software distribution.
+
+% Document created using this template should be compiled with XeLaTeX
+% engines rather than plain LaTeX or plain TeX engines.
+
+% The non-ASCII texts of this template is encoded in UTF-8 encoding.
+% Please note that XeLaTeX only accepts UTF-8 encoded documents, so
+% set your editor to use UTF-8 while creating documents with this template.
+
+% Recommended TeX software distribution to use with this template is
+% Tex Live developed by the TeX User Group (TUG), please visit the home
+% page of the distribution <https://www.tug.org/texlive/> for further details.
+
+% NOTE THAT IMPORTANT INSTRUCTIONS HAS BEEN WRITTEN AS UPPERCASE COMMENTS
+% IN THE TEXT, PLEASE READ THEM CAREFULLY AND FOLLOW THEM TO MAKE THE
+% TEMPLATE WORK!
+
+% Any further contributions to the template is welcome, please send
+% pull requests through github or send mail to maintainer.
+
+% For any other questions, please do not hesitate to contact maintainer.
+
+% Current maintainer:
+% Huang Kangjing <huangkangjing@gmail.com>
+
+% Contributors:
+% Sun Sibai <niasw@pku.edu.cn>
+% Cao Chuanwu <>
+% Huang Kangjing <huangkangjing@gmail.com>
+
+
+\documentclass[aps,pre,12pt,preprint,onecolumn,showpacs,showkeys]{revtex4-1}
+
+% Setting up Chinese handling.
+\usepackage{fontspec,xeCJK}
+
+% Setting up fonts.
+% PLEASE MODIFY ALL THESE FONT NAMES ACCORDING TO YOUR FONT
+% INSTALLATION AND PERFERENCE.
+
+% Setting up main fonts and mono fonts.
+\setmainfont{Liberation Serif}
+\setmonofont{Liberation Mono}
+% SimSun is required font for the main body of the text.
+\setCJKmainfont[AutoFakeBold=5,AutoFakeSlant]{SimSun}
+\setCJKmonofont[AutoFakeBold=2,AutoFakeSlant]{SimHei}
+
+% Setting up alternative font families.
+% Note that these three fonts below are required fonts in document
+% title, section headings and figure captions.
+\newCJKfontfamily\heiti[AutoFakeBold=2,AutoFakeSlant]{SimHei}
+\newCJKfontfamily\fangsong[AutoFakeBold=5,AutoFakeSlant]{FangSong}
+\newCJKfontfamily\kaiti[AutoFakeBold=5,AutoFakeSlant]{KaiTi}
+
+% Setting up paragraph indent.
+\parindent 2em
+
+% Setting up macros for Chinese-style font size setting.
+\newcommand{\fseight}{\fontsize{5.02}{6.02}\selectfont}
+\newcommand{\fsseven}{\fontsize{5.52}{6.62}\selectfont}
+\newcommand{\fsssix}{\fontsize{6.52}{7.83}\selectfont}
+\newcommand{\fssix}{\fontsize{7.53}{9.03}\selectfont}
+\newcommand{\fssfive}{\fontsize{9.03}{10.84}\selectfont}
+\newcommand{\fsfive}{\fontsize{10.54}{12.65}\selectfont}
+\newcommand{\fssfour}{\fontsize{12.05}{14.45}\selectfont}
+\newcommand{\fsfour}{\fontsize{14.05}{16.86}\selectfont}
+\newcommand{\fssthree}{\fontsize{15.06}{18.07}\selectfont}
+\newcommand{\fsthree}{\fontsize{16.06}{19.27}\selectfont}
+\newcommand{\fsstwo}{\fontsize{18.07}{21.68}\selectfont}
+\newcommand{\fstwo}{\fontsize{22.08}{26.50}\selectfont}
+\newcommand{\fssone}{\fontsize{24.09}{28.91}\selectfont}
+\newcommand{\fsone}{\fontsize{26.10}{31.32}\selectfont}
+\newcommand{\fsszero}{\fontsize{36.14}{43.36}\selectfont}
+\newcommand{\fszero}{\fontsize{42.16}{50.59}\selectfont}
+
+% Replace words to Chinese corespondence.
+\renewcommand\appendixname{附录}
+\renewcommand\abstractname{}
+\renewcommand\tablename{表}
+\renewcommand\figurename{图}
+
+% Replace words in revtex4-1 to Chinese corespondence.
+\makeatletter
+\def\@pacs@name{\heiti\fssfour \textbf{PACS码：}\normalfont}
+\def\@keys@name{\heiti\fssfour \textbf{关键词：}\normalfont}
+\def\Dated@name{日期：}
+\def\Received@name{\fssfive 接收 }
+\def\Revised@name{\fssfive 修订 }
+\def\Accepted@name{\fssfive 采纳 }
+\def\Published@name{\fssfive 发表 }
+\makeatother
+
+% Change label style of enumerate.
+\renewcommand{\labelenumi}{\alph{enumi}.}
+
+% Setting up geometry.
+\usepackage{geometry}
+\geometry{top=2.54cm,bottom=2.54cm,left=3cm,right=3cm}
+
+% Setting up line space.
+\usepackage{setspace}
+\linespread{1.6}
+
+% Setting up hyperreferences.
+\usepackage{hyperref}
+\hypersetup{colorlinks=true}
+
+% Setting up backgroud waterstamps.
+% PLEASE MODIFY OR DELETE THIS PART ACCORDING TO YOUR PERFERENCE.
+\usepackage{background}
+\SetBgContents{Copyright (C) 2014 Huang KangJing}
+\SetBgScale{2}
+
+% Setting up styles for section headings.
+\usepackage{titlesec}
+\titleformat*{\section}{\bf\fangsong\fsfour}
+\titleformat*{\subsection}{\bf\fangsong}
+
+% Loading packages for image handling.
+\usepackage{subfig}
+\usepackage{graphicx,psfrag,epsfig}
+
+% Setting up caption styles.
+\usepackage{caption}
+\DeclareCaptionFont{kaiti}{\kaiti}
+\DeclareCaptionFont{bfheiti}{\bf\heiti}
+\captionsetup{font=small,format=plain,labelfont=bfheiti,%
+  textfont=kaiti,justification=raggedright,%
+  singlelinecheck=false}
+
+% Loading packages for math typings.
+\usepackage{amsmath,amsfonts,amssymb,amsthm,bm,upgreek}
+\usepackage[mathscr]{eucal}
+\usepackage{siunitx}
+
+
+\begin{document}
+
+% Title and author info.
+\title{\bf\heiti\fsthree 实验题目\vspace{15mm}}
+\author{\fangsong\fsfour 姓名\vspace{2mm}}
+\affiliation{\normalfont\fssfour 年级~~~~学号\vspace{2mm}}
+\date{\today}
+\pacs{00.a}
+\keywords{关键词1，关键词2，关键词3，关键词4}
+\email{ email@example.com; (86)1XXXXXXXXXX}
+
+% Abstract.
+\begin{abstract}
+  \vspace{10mm}
+  \begin{spacing}{1.5}
+    \fssfour
+    此部分为摘要. 200—300字，说明用什么方法做了什么事，由此得到什么结果
+和结论，有何意义.摘要中不用缩略词，不用第一人称.
+  \end{spacing}
+\end{abstract}
+
+% The main body of the document goes from here.
+\maketitle
+\fssfour
+
+% Instructions on writing.
+\begin{enumerate}
+\item 课程实验报告应假定读者既不是已知全部实验细节的指导教师，也不是缺
+少专业知识的公众，而是同领域的实验研究者，或审稿人. 不能要求读者要在读
+过课程讲义后才能读懂课程实验报告.
+\item 文本和物理量单位用正体，物理变量符号用斜体，矢量矩阵符号用黑斜体.
+\item 使用国际标准的缩略词、符号和法定计量单位时应全文一致，正文中的缩
+略词在首次出现时写出全称，后附缩略词，并用括号括起，之后直接用缩略词，
+不再写全称，如American Institute of Physics (AIP).
+\item 全文标点符号除 “顿号” 外，其他用英文标点符号.
+\item 公式、图和表要分别用阿拉伯数字编列序号. 公式和图表要达到可发表的
+质量.
+\item 凡不是自己独立思考得到的内容都应该引参考文献. 不能大段引用同一参
+考文献. 对复杂问题，应该优先考虑引用参考文献得到结果. 对简单一些的问题
+才鼓励独立思考.
+\item 模板中的未尽事项可以参考AIP Style Manual 4th-edition (可从课程网
+站下载).
+\item 较长的推导和说明可以作为附件提交,不占用报告篇幅.
+\item 思考题不是报告的组成部分. 应另起一页附在报告的最后.
+\end{enumerate}
+
+\section{引言}
+
+研究论文引言一般包含以下内容：（1）所研究领域背景和现状；（2）有待研究
+的问题；（3）本研究的目的、主要内容和结果；（6）结果的意义.
+
+教学实验肯定不会是原创的. 在写实验报告的引言时，同学可以假想自己是第一
+个做类似研究的人.
+
+引言一定要切合报告正文，不能漫无目的地介绍背景. 要快速地将读者引导到报
+告主题上，并作较深入的讨论.
+
+引言篇幅可以在较大范围内变化，但最长不应超过报告文字篇幅的1/3.
+
+引言撰写可以参考实验讲义，可以复述，但不能复制讲义上的任何一句话.
+
+\section{实验}
+
+在此部分需要将实验条件交待清楚到别人能重复你的实验结果的程度. 此外,还需
+表明你已尽了最大努力来提高实验精度和结果的可靠性. 简单的不确定度估计可
+以在此节给出，复杂一些的可以放到分析讨论部分.
+
+实验条件不仅是指直接影响实验结果的实验参量，而且还包括影响实验质量和可
+靠性的因素，如室温、空气湿度、基真空、原材料纯度等.
+
+作为教学实验报告，此节写详细一点没有坏处.
+
+如有必要，各节下都可以再分节，如：
+\subsection{实验装置}
+
+\subsubsection{电~源}
+\begin{enumerate}
+\item {\it 输入变压器} 这是输入变压器.
+\end{enumerate}
+
+...
+
+\section{实验结果及分析讨论}
+
+此部分是实验报告的主体，应占报告篇幅的一半以上.
+
+依自己意愿，实验结果和对结果的分析讨论既可分为两节也可合在一节.
+
+实验结果应尽量以图表的形式给出. 每一个图表都应该是完整的，即阅读图表时
+可以不必依赖正文.
+
+表是被一系列横线隔开的有序排列的数据，报告格式要求最上和最下两条横线为
+双横线. 下页是表格和图片的例子.
+
+% Table example.
+\begin{table}[t]
+  \caption{\label{tab:table1}%
+    我是一个很长很长的标题，我是一个很长很长的标题，我是一个很长很长的标题}
+\begin{ruledtabular}
+  \begin{tabular}{ll}
+    Manucript\footnote{Note a.} & Journals\footnote{Note b.} \\
+    \colrule
+{\bf\uppercase\expandafter{\romannumeral 1}.} principle heading & {\bf\uppercase\expandafter{\romannumeral 1}. principle heading} \\
+A. first heading & {\bf A. first heading} \\
+\end{tabular}
+\end{ruledtabular}
+\end{table}
+
+% Figure example.
+% PLEASE NOTE THAT HERE "sample.png" IS USED TO DEMONSTRATE THE USE
+% OF FIGURES, SO PLEASE PROVIDE A PNG FILE IN THAT NAME IF YOU WISH
+% TO COMPILE THIS FILE DIRECTLY TO SEE HOW IT LOOKS LIKE!
+\begin{figure}[t]
+  \centering
+\includegraphics[width=80mm]{sample.png}
+\caption{\label{fig:gax}%
+我是一个很长很长的标题，我是一个很长很长的标题，我是一个很长很长的标题}
+\end{figure}
+
+表~\ref{tab:table1} 给出的是~AIP（美国物理联合会）期刊子标题的格式，我
+们的对课程报告也作同样的要求.
+
+从表~\ref{tab:table1} 可以看出，对表中各项的注释应作为表的一部分放在表
+后，而不是页脚或文尾.
+
+每个图一般包含：图名、轴名、轴、刻度、标尺、数据点、曲线、图例、标注和
+图注等部分. 应尽量让读者不看正文就能基本理解图的含意.
+
+最常用的作图软件是Origin.学习使用基本的数据处理和作图工具软件也是课程的
+基本内容. 课程鼓励大家使用Python语言编程作图.
+
+逐点测量得到的函数关系要同时用表格和图给出. 需要作比较的多条曲线要画在
+同一图上.
+
+为避免读者在图表和正文间反复跳跃阅读，在正文中也要对图表作必要的说明.
+
+公式例子：
+
+% Equation example.
+\begin{equation}
+N(x_0,y_0,z_0)=\prod_{j\in\{x\}}g(j_0,\sigma^j_0) \label{eq:1}
+\end{equation}
+
+对于预料之外的实验结果，必须首先小心证明其可靠性.读者只有在相信你的实验
+结果时才愿意花时间看你的分析.
+
+必须用文字归纳整理出正式的实验结果或结论.可信的实验结果是课程报告最重要
+的内容.作为一个实验物理工作者，分析解释出错并不丢脸，实验结果不被采信则
+是致命的.
+
+教学实验的结论往往是预先知道的. 所以，教师更关心的是你的说理过程. 一般
+说来，单由课内实验的结果不足以能得到明确的结论. 此时，你可以引用他人的
+研究结果来帮助帮助自己的论证，但必须注明出处.
+
+确实不能得到明确结论时，可以给出几种可能结论并指出可以再做哪些实验来帮
+助作进一步的判断.
+
+总之，分析讨论部分要做到: 论据要valid，论证要reasonable，结论要
+convincing.
+
+\section{结论}
+
+首先要给出实验结果，然后再给出由实验结果分析得到的结果和结论．此部分给
+出的内容要比摘要中的全面，用词要更准确．
+
+\section{致谢}
+
+硕、博士论文致谢词产生器
+\href{http://acknowledgement.sinaapp.com/}{http://acknowledgement.sinaapp.com/}
+
+此部分应感谢指导教师、实验室技术人员、同组人和对实验和报告有帮助的其他
+人．
+
+
+下面是参考文献的例子
+
+% Bibliography example.
+\begin{thebibliography}{}
+\bibitem{Book} 吴思成，王祖铨~2010 近代物理实验（第三版）（北京：高等教
+育出版社）第xxx页.  %实验书
+\bibitem{kw1} Chu S, Hollberg L, Bjorkholm J E, Cable A, Ashkin A 1985
+{\it Phys. Rev. Lett.} {\bf 55} 48.%英文期刊
+\bibitem{kw2} 耿涛，闫树斌，王彦华，杨海菁，张天才，王军民~2005 物理学
+报~{\bf 54} 5104.%中文期刊
+\bibitem{kw3} 王彦华~2007 博士学位论文（太原：山西大学）.%学位论文
+\bibitem{kw4} 冯端，金国钧~2003 凝聚态物理学(上卷)(北京:高等教育出版社)
+第341页.%专著
+\bibitem{kw5} Tabbal A M, Mérel P, Chaker M 1999 Proceedings of the
+14th International Symposium on Plasma Chemistry Prague, Czech
+Republic, August 2-6，1999 p1099.%会议文集
+\bibitem{kw6} Plank C J U.S. Patent 4 081 490 [1978-02-15].%专利
+\bibitem{kw7} 史寒朵~北京大学2012年近代物理实验报告：He-Ne 激光器放电性
+质研究. %同学实验报告
+\end{thebibliography}
+
+\clearpage
+\appendix
+\section{思考题}
+
+
+
+\end{document}

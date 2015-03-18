@@ -1,0 +1,399 @@
+% MplTplt - Yet another LaTeX template for Modern Physics Lab, PKU.
+% Copyright (C) 2014 Huang Kangjing and contributors
+ 
+% This work is completely rewritten basing on the work of Cao Chuanwu
+% and Sun Sibai, with texts in the template originally coming from the
+% Modren Phys. Lab.
+ 
+% This file is released under the MIT license.
+%
+% Permission is hereby granted, free of charge, to any person obtaining a copy
+% of this software and associated documentation files (the "Software"), to deal
+% in the Software without restriction, including without limitation the rights
+% to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+% copies of the Software, and to permit persons to whom the Software is
+% furnished to do so, subject to the following conditions:
+% 
+% The above copyright notice and this permission notice shall be included in
+% all copies or substantial portions of the Software.
+% 
+% THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+% IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+% FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+% AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+% LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+% OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+% THE SOFTWARE.
+%
+ 
+% This template depends on the "revtex4.1" package from APS Journals
+% <http://publish.aps.org/revtex/revtex-faq>, and the Chinese handling
+% is done with XeLaTeX engine and package "xeCJK". Please ensure these
+% packages are available in your chosen Tex software distribution.
+ 
+% Document created using this template should be compiled with XeLaTeX
+% engines rather than plain LaTeX or plain TeX engines.
+ 
+% The non-ASCII texts of this template is encoded in UTF-8 encoding.
+% Please note that XeLaTeX only accepts UTF-8 encoded documents, so
+% set your editor to use UTF-8 while creating documents with this template.
+ 
+% Recommended TeX software distribution to use with this template is
+% Tex Live developed by the TeX User Group (TUG), please visit the home
+% page of the distribution <https://www.tug.org/texlive/> for further details.
+ 
+% NOTE THAT IMPORTANT INSTRUCTIONS HAS BEEN WRITTEN AS UPPERCASE COMMENTS
+% IN THE TEXT, PLEASE READ THEM CAREFULLY AND FOLLOW THEM TO MAKE THE
+% TEMPLATE WORK!
+ 
+% Any further contributions to the template is welcome, please send
+% pull requests through github or send mail to maintainer.
+ 
+% For any other questions, please do not hesitate to contact maintainer.
+ 
+% Current maintainer:
+% Huang Kangjing <huangkangjing@gmail.com>
+ 
+% Contributors:
+% Sun Sibai <niasw@pku.edu.cn>
+% Cao Chuanwu <>
+% Huang Kangjing <huangkangjing@gmail.com>
+ 
+ 
+\documentclass[aps,pre,12pt,preprint,onecolumn,showpacs,showkeys]{revtex4-1}
+ 
+% Setting up Chinese handling.
+\usepackage{fontspec,xeCJK}
+ 
+% Setting up fonts.
+% PLEASE MODIFY ALL THESE FONT NAMES ACCORDING TO YOUR FONT
+% INSTALLATION AND PERFERENCE.
+ 
+% Setting up main fonts and mono fonts.
+\setmainfont{Liberation Serif}
+\setmonofont{Liberation Mono}
+% SimSun is required font for the main body of the text.
+\setCJKmainfont[AutoFakeBold=5,AutoFakeSlant]{SimSun}
+\setCJKmonofont[AutoFakeBold=2,AutoFakeSlant]{SimHei}
+ 
+% Setting up alternative font families.
+% Note that these three fonts below are required fonts in document
+% title, section headings and figure captions.
+\newCJKfontfamily\heiti[AutoFakeBold=2,AutoFakeSlant]{SimHei}
+\newCJKfontfamily\fangsong[AutoFakeBold=5,AutoFakeSlant]{FangSong}
+\newCJKfontfamily\kaiti[AutoFakeBold=5,AutoFakeSlant]{KaiTi}
+ 
+% Setting up paragraph indent.
+\parindent 2em
+ 
+% Setting up macros for Chinese-style font size setting.
+\newcommand{\fseight}{\fontsize{5.02}{6.02}\selectfont}
+\newcommand{\fsseven}{\fontsize{5.52}{6.62}\selectfont}
+\newcommand{\fsssix}{\fontsize{6.52}{7.83}\selectfont}
+\newcommand{\fssix}{\fontsize{7.53}{9.03}\selectfont}
+\newcommand{\fssfive}{\fontsize{9.03}{10.84}\selectfont}
+\newcommand{\fsfive}{\fontsize{10.54}{12.65}\selectfont}
+\newcommand{\fssfour}{\fontsize{12.05}{14.45}\selectfont}
+\newcommand{\fsfour}{\fontsize{14.05}{16.86}\selectfont}
+\newcommand{\fssthree}{\fontsize{15.06}{18.07}\selectfont}
+\newcommand{\fsthree}{\fontsize{16.06}{19.27}\selectfont}
+\newcommand{\fsstwo}{\fontsize{18.07}{21.68}\selectfont}
+\newcommand{\fstwo}{\fontsize{22.08}{26.50}\selectfont}
+\newcommand{\fssone}{\fontsize{24.09}{28.91}\selectfont}
+\newcommand{\fsone}{\fontsize{26.10}{31.32}\selectfont}
+\newcommand{\fsszero}{\fontsize{36.14}{43.36}\selectfont}
+\newcommand{\fszero}{\fontsize{42.16}{50.59}\selectfont}
+ 
+% Replace words to Chinese corespondence.
+\renewcommand\appendixname{附录}
+\renewcommand\abstractname{}
+\renewcommand\tablename{表}
+\renewcommand\figurename{图}
+ 
+% Replace words in revtex4-1 to Chinese corespondence.
+\makeatletter
+\def\@pacs@name{\heiti\fssfour \textbf{PACS码：}\normalfont}
+\def\@keys@name{\heiti\fssfour \textbf{关键词：}\normalfont}
+\def\Dated@name{日期：}
+\def\Received@name{\fssfive 接收 }
+\def\Revised@name{\fssfive 修订 }
+\def\Accepted@name{\fssfive 采纳 }
+\def\Published@name{\fssfive 发表 }
+\makeatother
+ 
+% Change label style of enumerate.
+\renewcommand{\labelenumi}{\alph{enumi}.}
+ 
+% Setting up geometry.
+\usepackage{geometry}
+\geometry{top=2.54cm,bottom=2.54cm,left=3cm,right=3cm}
+ 
+% Setting up line space.
+\usepackage{setspace}
+\linespread{1.6}
+ 
+% Setting up hyperreferences.
+\usepackage{hyperref}
+\hypersetup{colorlinks=true}
+ 
+% Setting up styles for section headings.
+\usepackage{titlesec}
+\titleformat*{\section}{\bf\fangsong\fsfour}
+\titleformat*{\subsection}{\bf\fangsong}
+ 
+% Loading packages for image handling.
+\usepackage{subfig}
+\usepackage{graphicx,psfrag,epsfig}
+ 
+% Setting up caption styles.
+\usepackage{caption}
+\DeclareCaptionFont{kaiti}{\kaiti}
+\DeclareCaptionFont{bfheiti}{\bf\heiti}
+\captionsetup{font=small,format=plain,labelfont=bfheiti,%
+  textfont=kaiti,justification=raggedright,%
+  singlelinecheck=false}
+ 
+% Loading packages for math typings.
+\usepackage{amsmath,amsfonts,amssymb,amsthm,bm,upgreek}
+\usepackage[mathscr]{eucal}
+\usepackage{siunitx}
+\usepackage{pdfpages} 
+ 
+\begin{document}
+ 
+% Title and author info.
+\title{\bf\heiti\fsthree NaI(Tl)闪烁谱仪测定$\gamma$射线的能谱\vspace{15mm}}
+\author{\fangsong\fsfour 黄康靖\vspace{2mm}}
+\affiliation{\normalfont\fssfour 北京大学物理学院2012级本科生~~~~学号:{masked student id}\vspace{2mm}}
+\date{\today}
+\keywords{$\gamma$射线,闪烁谱仪,能谱,闪烁体}
+\email{ huangkangjing@gmail.com; {masked phone number}}
+ 
+% Abstract.
+\begin{abstract}
+  \vspace{10mm}
+  \begin{spacing}{1.5}
+    \fssfour
+闪烁体探测器是利用某些物质在射线作用下会发光的特性,对放射线进行测量和
+探测的仪器.在核物理实验中,比较常见的闪烁体探测器为NaI(Tl)闪烁谱仪.本实
+验对于其的原理、特性与结构进行了了解与研究,鉴定了其的能量分辨率与线性.并
+且使用探测器,对于$\gamma$射线与物质相互作用的规律进行了研究
+  \end{spacing}
+\end{abstract}
+ 
+% The main body of the document goes from here.
+\maketitle
+\fssfour
+
+\section{引言}
+
+闪烁体探测器是利用某些物质在射线作用下会发光的特性,对放射线进行测量和
+探测的仪器.其主要优点是:既能够探测各种类型的带电粒子,又能探测中性粒子;
+既能够探测粒子的强度(即单位时间内的粒子数目),也能够探测粒子的能量;并且
+探测效率高,分辨时间短.这些优秀的特性使得闪烁探测器在核物理研究和放射性
+同位素的测量中都得到了非常广泛的应用.\cite{book}
+
+在核物理实验中,比较常见的闪烁体探测器为NaI(Tl)闪烁谱仪.对于其原理、特
+性与结构的学习与了解是有实际意义的.本实验对于闪烁谱仪的这些原理、特性
+与结构进行了了解与研究,鉴定了其的能量分辨率与线性.并且通过对于$\gamma$
+射线能谱的测量,对于$\gamma$射线与物质相互作用的规律进行了研究.
+
+\section{实验}
+
+\subsection{仪器}
+
+本实验采用的NaI(Tl)闪烁谱仪结构如图~\ref{fig:ins}所示.
+
+\begin{figure}[htbp]
+  \centering
+\includegraphics[width=\textwidth]{graph.pdf}
+\caption{\label{fig:ins}%
+实验采用的NaI(Tl)闪烁谱仪结构示意图}
+\end{figure}
+
+闪烁谱仪探测放射线的能谱的机制如下: 当有放射线粒子通过闪烁体时,闪烁体
+将会闪烁发光,产生一个闪烁光脉冲信号.闪烁光脉冲信号将会通过光电倍增管被
+转化为一个放大的电脉冲信号,进而进一步被线性放大器放大为一个更大的电脉
+冲信号.电脉冲信号的强度应当正比于闪烁光脉冲信号,从而正比于放射线粒子在
+闪烁体内失去的能量,进而线性相关于放射线的能量.另一方面,当入射放射线的强度
+不是太强,或者说发光体发光的衰减时间足够短,从而使得闪烁光脉冲产生的电脉
+冲在时间上彼此独立可以分辨时,计数电脉冲信号即可测量放射线的强度.
+
+这样,闪烁谱仪就能同时用于测定放射线的能量和强度.实验上,为了测定入射放
+射线的能谱,往往将闪烁探测器的输出端接入单道脉冲幅度分析器,以对具备某一
+特定能量(幅度)的脉冲进行计数.在现代微机技术下,亦有多道分析器用于同步地
+测定整个能谱范围内各能量的脉冲计数,以实现能谱的快速而方便的测量.\cite{book}
+
+对于一台闪烁谱仪,它有许多与其精度相关的参数.其中在本实验中比较值得注意
+的是能量分辨率,这个参数表征对于单一能量的粒子输入,谱仪测量输出的能量谱
+展宽.其定义为脉冲计数率随脉冲幅度分布的半峰宽度$\Delta V_{1/2}$与计数
+率最大的脉冲幅度$V_0$之比.即
+\begin{equation}
+  \epsilon = \frac{\Delta V_{1/2}}{V_0}
+\end{equation}
+
+另一方面,利用闪烁谱仪做精确能量测量时,需要确定入射粒子的能量和它产生的脉
+冲幅度之间的线性关系.通常的做法是取一组标准源,测量该源相应的峰处的脉冲
+幅度,建立粒子能量和对应峰位的关系曲线,称为能量刻度曲线.典型的能量刻度
+曲线为
+\begin{equation}
+  E = GX_p + E_0
+\end{equation}
+
+\subsection{背景: $\gamma$射线与物质的相互作用}
+
+$\gamma$射线与物质的相互作用主要有三种过程:\cite{book}
+
+\begin{enumerate}
+\item 光电效应
+
+入射$\gamma$粒子把能量全部转移给原子中的束缚电子,从而把电子打出来形成
+光电子的过程,其机制满足爱因斯坦光电效应方程:
+\begin{equation}
+  h\nu = E_k + A
+\end{equation}
+
+\item 康普顿散射
+
+入射$\gamma$粒子和原子中的束缚电子发生弹性碰撞,从而将部分能量转移给电
+子的过程,其机制满足方程:
+\begin{equation}
+  h\nu' = \frac{h\nu}{1+\alpha(1-\cos{\theta})}
+\end{equation}
+
+\item 正负电子对的产生
+
+当$\gamma$射线能量超过$2m_ec^2$(\SI{1.022}{MeV})之后,它可以受原子核或
+者电子的库伦场作用转化为正负电子对.
+
+这一过程存在辐射光子能量为\SI{0.511}{Mev}的特征辐射,由产生的正电子湮灭
+之后产生.
+\end{enumerate}
+
+\subsection{实验内容}
+
+实验先后完成了:
+
+\begin{enumerate}
+\item 使用单道分析器对$^{137}\text{Cs}$的能谱作测量.
+\item 使用单道分析器,利用$^{137}\text{Cs}$和$^{60}\text{Co}$的四个峰给闪烁谱仪定标,测量其能
+  量刻度曲线.
+\item 使用多道分析器观察了混合谱和单一谱下测得能谱的图线区别.
+\end{enumerate}
+
+
+\section{实验结果及分析讨论}
+ 
+实验采用单道分析器对$^{137}\text{Cs}$的能谱进行测量,得到的结果绘为图线,见
+图~\ref{fig:plot}
+
+\begin{figure}[htbp]
+  \centering
+\includegraphics[width=\textwidth]{plot1.pdf}
+\caption{\label{fig:plot}%
+实验测量并绘制的$^{137}\text{Cs}$能谱图线,图中能谱图线为各实验点作自然
+样条插值得到的.}
+\end{figure}
+
+实验的能谱图线为各测量得到的实验点作自然样条插值得到,根据插值结果,我们
+可以求出$^{137}\text{Cs}$的\SI{0.662}{MeV}峰的半峰宽度和峰位置等，并由
+此计算出闪烁谱仪的能量分辨率．相关数据参见表~\ref{tab:energy}
+
+
+\begin{table}[htbp]
+  \caption{\label{tab:energy}%
+    能量分辨率的相关计算数据表格,表中左右半高位置和峰位置都是计算实验
+    数据点的自然样条插值结果得到的}
+\begin{ruledtabular}
+  \begin{tabular}{llll}
+    左半高位置/\si{V}& 右半高位置/\si{V} & 半高宽度/\si{V} & 峰位置/\si{V}  \\
+    $6.676$&$7.311$&$0.635$&$6.996$ \\
+    \colrule
+ & 能量分辨率 $\epsilon$ & $0.0908$& 
+
+\end{tabular}
+\end{ruledtabular}
+\end{table}
+ 
+
+另一方面,实验对闪烁谱仪完成了标定,并且拟合出了能量刻度曲线.相关的标定
+数据见表~\ref{tab:cali},拟合的能量刻度曲线见图~\ref{fig:cali}.
+
+\begin{table}[htbp]
+  \caption{\label{tab:cali}%
+    用于标定能量刻度曲线的标定数据以及能量刻度曲线的集合结果数据表格.}
+\begin{ruledtabular}
+  \begin{tabular}{ll}
+峰位置脉冲幅度 $U$/\si{V} & 放射线能量 $E$/\si{MeV} \\
+\colrule
+$3.5$ & $0.662$ \\
+$1.1$ & $0.184$ \\
+$6.8$ & $1.33$ \\
+$6.0$ & $1.17$ \\ \colrule
+拟合斜率/\si{(MeV)V^{-1}} & $0.2013$ \\
+拟合截距/\si{MeV} & $-0.03922$ \\
+相关系数 & $0.999990$
+\end{tabular}
+\end{ruledtabular}
+\end{table}
+
+\begin{figure}[htbp]
+  \centering
+\includegraphics[width=\textwidth]{plot2.pdf}
+\caption{\label{fig:cali}%
+实验标定完成的闪烁谱仪能量刻度曲线,图中直线为对标定数据作最小二乘线性
+回归的结果}
+\end{figure}
+
+\section{结论}
+ 
+实验鉴定了NaI(Tl)闪烁谱仪的能量分辨率,结果为
+\begin{equation}
+  \epsilon = 0.0908
+\end{equation}
+并且测量了$^{137}\text{Cs}$的能谱图,见图~\ref{fig:plot}
+
+实验完成了对闪烁谱仪的标定,测得了其能量刻度曲线为
+\begin{equation}
+  E = 0.2013X −0.03922
+\end{equation}
+并绘制了这一曲线,见图~\ref{fig:cali}
+\section{致谢}
+ 
+感谢楼建玲老师在实验中认真而专业的指导.
+
+感谢史寒朵学姐提供实验报告文档作为实验报告格式的参考.
+
+\begin{thebibliography}{}
+\bibitem{book} 吴思成，王祖铨~2010 近代物理实验（第三版）（北京：高等教
+育出版社）第65页.
+\bibitem{report} 史寒朵~北京大学2012年近代物理实验报告：He-Ne 激光器放电性
+质研究.
+\end{thebibliography}
+ 
+\clearpage
+\appendix
+\section{思考题}
+\begin{enumerate}
+\item 因为不作能量刻度的话,无法建立测量值和能量值之间的一一对应关系.
+
+本实验使用$^{137}\text{Cs},^{60}\text{Co}$的标准峰来作刻度.
+
+放射源不够多时,原则上来讲只需要知道两个标准峰就能完成刻度.
+\item 图线越集中,能量分辨率越高
+\item 测量时间应该考虑放射源活度选取,时间越长,测量越精确.
+\item 道宽和改变量应该参考峰宽选取;脉冲幅度应合适选取使得峰在量程内能
+  被完整测量.
+\item 反散射峰是射线在光电倍增管上作180度康普顿散射的结果,增加闪烁体厚
+  度可以减少这一效应.
+\end{enumerate}
+ 
+ \section{实验数据的处理代码}
+
+实验数据使用sage数学套件处理,处理代码作为附件附在文后.
+
+\newpage
+\includepdf[pages=1]{sage.pdf}
+\includepdf[pages=-]{sage.pdf}
+
+\end{document}
