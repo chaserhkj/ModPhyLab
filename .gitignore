@@ -6,4 +6,4 @@
 *.fdb_latexmk
 *.fls
 textNotes.bib
-
+build.sh
