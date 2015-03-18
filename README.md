@@ -8,6 +8,8 @@ course at School of Physics, Peking University.
 For the sake and benefit of others, I decided to put all these reports as
 publicly avaliable.
 
+All reports are written in Chinese.
+
 Template
 ========
 
@@ -18,6 +20,9 @@ I firstly released this template (MplTplt.tex - Yet another LaTeX template for
 Modern Physics Lab, PKU) as a
 [gist](https://gist.github.com/chaserhkj/a8dc4752987ce295c3d7), but have now
 decided to keep it maintained here.
+
+For any issues about the template, please do not hesitate to mail me or submit
+an issue here about it.
 
 Build
 =====
